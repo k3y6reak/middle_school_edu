@@ -1,0 +1,159 @@
+<!---#include file="../session.asp"--->
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>:::::::OyesMall Visitor's Book :::::::</TITLE>
+<style type="text/css">
+<!--
+body{ font-family: 돋움; font-size: 9pt; color: #177c15; background-attachment: fixed;background-repeat: no-repeat; background-position: right bottom; line-height:140%; }
+table,select,input,div,form,textarea,center { font-family: 돋움; font-size: 9pt; color:#ff0000; line-height:140%; }
+blockquote { font-family: 돋움; font-size: 9pt; line-height: 140%; color: #177c15 }
+a{ font-family:돋움; font-size:9pt; color:#177c15; text-decoration:none }
+a:hover{ font-family:돋움; font-size:9pt; color:#666666; text-decoration:underline; }
+-->
+</style>
+
+<style type="text/css"> 
+			textarea {
+						scrollbar-face-color: #000000; 
+						scrollbar-shadow-color: #ff0000; 
+
+						scrollbar-highlight-color: #ff0000; 
+						scrollbar-3dlight-color:#000000; 
+
+						scrollbar-darkshadow-color: #000000; 
+						scrollbar-track-color: #000000; 
+
+						scrollbar-arrow-color: #ff0000
+						} 
+
+				</style> 
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function write_Check(myform){
+	var name = myform.name.value
+	var email = myform.email.value
+	var content = myform.content.value
+
+function ErrMsg( err, msg ) {
+	alert( msg );
+	err.focus();
+	err.select();
+}
+
+function emailCheck( value ) {
+	var cnt = 0;
+	for (var i = 0; i < value.length; i++)
+		if( value.charAt(i) == '@' ) 
+			cnt++
+		if( cnt != 1 )
+			return false;     
+		else if ( value.indexOf("@") < 3 ) 
+			return false;
+		else if( value.length - value.substr(0,value.indexOf("@")).length == 0 )
+			return false;
+		else if( value.search(/(\S+)@(\S+)\.(\S+)/) == -1 )
+			return false;
+		else 
+	return true;
+}
+
+if (name.length == 0){
+	ErrMsg(myform.name,"이름을 입력해주세요.")
+	return false;
+}
+
+if (name.length < 2){
+	ErrMsg(myform.name,"이름은 한글자 이상이어야 합니다.")
+	return false;
+}
+
+if(email ==0 && !emailCheck(email)){
+	ErrMsg(myform.email,"지금 입력하신 \" "+email+" \" 은(는) \n\n올바른 E-Mail 이 아닙니다.\n\n정확한 주소를 입력해 주세요!")
+	return false;
+}
+
+if (content.length == 0){
+	ErrMsg(myform.content,"남기실 글을 적어주세요.");
+	return false;
+}
+
+return true;
+}
+
+function MM_controlSound(x, _sndObj, sndFile) { //v3.0
+  var i, method = "", sndObj = eval(_sndObj);
+  if (sndObj != null) {
+    if (navigator.appName == 'Netscape') method = "play";
+    else {
+      if (window.MM_WMP == null) {
+        window.MM_WMP = false;
+        for(i in sndObj) if (i == "ActiveMovie") {
+          window.MM_WMP = true; break;
+      } }
+      if (window.MM_WMP) method = "play";
+      else if (sndObj.FileName) method = "run";
+  } }
+  if (method) eval(_sndObj+"."+method+"()");
+  else window.location = sndFile;
+}
+//-->
+</SCRIPT>
+
+
+
+</HEAD>
+<BODY bgcolor="#f0fff0" leftmargin="0" topmargin="0">
+
+<form name="myform" method="post" action="write_ok.asp" onSubmit="return write_Check(this)">
+  <table align="center" width="100%" border="0" bgcolor="#ff0000" cellspacing="1" cellpadding="0">
+    <tr> 
+      <td> 
+        <table align="center" width="100%" cellpadding="0" cellspacing="3" border="0" bgcolor="#000000">
+          <tr> 
+            <td width="35%"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr> 
+                  <td background=""> <font color="red" >............................................</font> 
+                    <p>&nbsp;Name&nbsp;
+                      <input name="name" maxlength="15" size="20" style="font-size:9pt;height:18px;color:#787878;background-color:#000000;border:1 solid #ff0000;">
+                    <p>&nbsp;Mail&nbsp;&nbsp;&nbsp;
+                      <input name="email"  maxlength="25" size="20" style="font-size:9pt;height:18px;color:#787878;background-color:#000000;border:1 solid #ff0000;">
+                    <p>&nbsp;Home&nbsp;
+                      <input name="homepage" value="http://" maxlength="40" size="20" style="font-size:9pt;height:18px;color:#787878;background-color:#000000;border:1 solid #ff0000;">
+                    <p><font color="red" >............................................</font> 
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="65%" valign="top"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <textarea name="content" rows="10" wrap="hard" style="font-size:9pt;color:#787878;background-color:#000000;border:1 solid #ff0000;width:95%"></textarea>
+                  </td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr valign="top"> 
+                  <td colspan="2" align="center"> 
+                    <input type="submit" value=" Submit " style="font-size:9pt;height:21px;color:#ff0000;background-color:#000000;border:1 solid #ff0000;cursor: hand;width:30%;" id=submit1 name=submit1>
+                    &nbsp; <img src="images/blank.gif" width="1" height="1" > 
+                    <input type="reset" value=" Reset " style="font-size:9pt;height:21px;color:#ff0000;background-color:#000000;border:1 solid #ff0000;cursor: hand;width:30%;" id=reset1 name=reset1>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+</BODY>
+</HTML>

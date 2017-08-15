@@ -1,0 +1,10 @@
+A:link, A:visited		{font-size:9pt;font-family:±¼¸²,arial;color:#336666;text-decoration: none;}
+A:active			{font-size:9pt;font-family:±¼¸²,arial;color:#FE7C12;text-decoration: none;}
+A:hover     			{font-size:9pt;font-family:±¼¸²,arial;color:#FE7C12;text-decoration: none;}
+Td				{font-size:9pt;font-family:±¼¸²,arial;color:#4B4B4B;line-height:20px;}
+Th				{font-size:9pt;font-family:±¼¸²,arial;color:#4B4B4B}
+Body				{font-size:9pt;font-family:±¼¸²,arial;color:#4B4B4B}
+select,input,textarea {font-size:9pt;font-family:±¼¸²;}
+.inputType {font-size:9pt;font-family:±¼¸²;border-style:groove;}
+.submitType1 { font-size:8pt;font-family:tahoma;color:white; background-color:#40506F; border-top-width:0; border-right-width:0; border-bottom-width:0; border-left-width:0; border-color:#40506F;}
+.tahomaType {font-size:8pt;font-family:tahoma;}
