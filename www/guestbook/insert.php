@@ -1,4 +1,9 @@
 <?
+
+  $name = $_GET['name'];
+  $passwd = $_GET['passwd'];
+  $content = $_GET['content'];
+
    if(!$name) {
      echo("
 	   <script>
